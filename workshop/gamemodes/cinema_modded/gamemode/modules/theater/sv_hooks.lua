@@ -160,7 +160,7 @@ local function PlayerChangeTheater( ply, loc, old )
 			ply:SetInTheater(false)
 		end
 
-		hook.Run( "PostPlayerExitTheater", ply, Theater )
+		hook.Run( "PostPlayerExitTheater", ply, OldTheater )
 
 	end
 
@@ -170,7 +170,7 @@ local function PlayerChangeTheater( ply, loc, old )
 		theater.PlayerJoin( ply, loc )
 		ply:SetInTheater(true)
 
-		hook.Run( "PostPlayerEnterTheater", ply, Theater )
+		hook.Run( "PostPlayerEnterTheater", ply, OldTheater )
 
 	end
 
